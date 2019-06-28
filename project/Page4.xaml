@@ -1,0 +1,78 @@
+﻿<Page x:Class="project.Page4"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:project"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Page4">
+    <Page.Resources>
+        <Style TargetType="TextBox">
+            <Setter Property="Width" Value="300" />
+            <Setter Property="Height" Value="30" />
+            <Setter Property="Margin" Value="7" />
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+        </Style>
+        <Style TargetType="Label">
+            <Setter Property="HorizontalAlignment" Value="Right"/>
+            <Setter Property="Height" Value="30" />
+            <Setter Property="Margin" Value="7" />
+        </Style>
+    </Page.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="200"/>
+
+        </Grid.ColumnDefinitions>
+
+       
+            <Label Content="Введите данные Вашей карты" Grid.Column="1" Grid.ColumnSpan="2"> 
+                <Label.Resources>
+                    <Style TargetType="Label">
+                        <Setter Property="FontSize" Value="30"/>
+                        <Setter Property="HorizontalAlignment" Value="Center"/>
+                </Style>
+                </Label.Resources>
+            </Label>
+        <StackPanel Orientation="Vertical" Grid.Column="1" Margin="0,70,0,0" >
+            <Label  Content="Имя на карте"/>
+            <Label  Content="16-значный номер на карте"/>
+            <Label  Content="Срок действия карты"/>
+            <Label  Content="CVV2/CVC2"/>
+            <Label  Content="Ваш действующий Email"/>
+            <Label  Content="Ваш телефон"/>
+        </StackPanel>
+        <StackPanel Orientation="Vertical" Grid.Column="2" Margin="0,70,0,0"  >
+            <TextBox />
+            <TextBox />
+            <TextBox />
+            <TextBox />
+            <TextBox />
+            <TextBox />
+
+        </StackPanel>
+
+        <Button Grid.Column="1" Grid.ColumnSpan="2" Width="150" Height="40" Margin="100,350,0,0"> Оплатить
+            <Button.Resources>
+                <Style TargetType="Border">
+                   
+                    <Setter Property="CornerRadius" Value="7"/>
+                </Style>
+                <Style TargetType="Button">
+                    <Setter Property="Background" Value="#27408B"></Setter>
+                    <Setter Property="Foreground" Value="White"/>
+
+                    <Setter Property="HorizontalAlignment" Value="Center"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+    </Grid>
+</Page>
